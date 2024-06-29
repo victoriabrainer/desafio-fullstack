@@ -1,0 +1,17 @@
+<div class="home">
+  <app-sidebar></app-sidebar>
+  <div class="content">
+    <button class="add-car-button" (click)="openAddCarModal()">
+      Adicionar Carro
+    </button>
+    <div class="car-cards">
+      <app-cards
+        *ngFor="let car of cars"
+        [car]="car"
+        (edit)="openEditCarModal($event)"
+        (delete)="openDeleteCarModal($event)"
+      ></app-cards>
+    </div>
+  </div>
+</div>
+

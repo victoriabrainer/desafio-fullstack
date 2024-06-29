@@ -1,0 +1,39 @@
+.car-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-image-carousel {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.car-details {
+  margin-top: 10px;
+}
+
+.car-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-actions button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.car-actions button:hover {
+  background-color: #ddd;
+}

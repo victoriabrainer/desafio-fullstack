@@ -1,0 +1,17 @@
+<div class="sidebar" [class.collapsed]="isCollapsed">
+  <div class="logo">
+    <img src="../../../../assets/images/logo.png" alt="Logo Parvi" />
+  </div>
+  <div class="menu">
+    <p>Menu</p>
+    <button (click)="nagivateToHome()"></button>
+    <div class="admin-section">
+      <p>Admin</p>
+      <button (click)="openSettings()"></button>
+      <button (click)="logout()">Sair</button>
+    </div>
+  </div>
+  <button class="toggle-button" (click)="toggleSidebar()">
+    {{ isCollapsed ? ">" : "<" }}
+  </button>
+</div>

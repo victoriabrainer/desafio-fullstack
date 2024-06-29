@@ -1,0 +1,19 @@
+.home {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.add-car-button {
+  margin-bottom: 20px;
+}
+
+.car-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}

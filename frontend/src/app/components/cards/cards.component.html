@@ -1,0 +1,19 @@
+<div class="car-card">
+  <div class="car-carousel">
+    <!-- TODO:Carousel with car images -->
+    <img src="../../../assets/images/corolla.png" alt="Imagem do carro" />
+  </div>
+  <div class="car-info">
+    <p>{{ car.model }}</p>
+    <p>{{ car.year }}</p>
+    <p>{{ car.version }}</p>
+    <p>{{ car.km }}</p>
+    <p>{{ car.store }}</p>
+    <p>{{ car.price }}</p>
+  </div>
+  <div class="car-actions">
+    <button (click)="editCar()">Editar</button>
+    <button (click)="deleteCar()">Excluir</button>
+    <button>Comprar</button>
+  </div>
+</div>
