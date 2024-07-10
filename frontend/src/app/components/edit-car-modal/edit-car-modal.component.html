@@ -1,11 +1,98 @@
-<div class="modal">
-  <div class="modal-content">
-    <h2>Editar Carro</h2>
-    <form (ngSubmit)="onSubmit()">
-      <!-- Form fields for car details -->
-      <button type="submit">Salvar</button>
-      <button type="button" (click)="closeModal()">Cancelar</button>
-      <button type="button" (click)="confirmDelete()">Cancelar</button>
-    </form>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="editCarModal"
+  tabindex="-1"
+  aria-labelledby="editCarModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="carBrand" class="form-label">Marca</label>
+            <select
+              class="form-select"
+              id="carBrand"
+              (ngModel)="(car.brand)"
+              name="brand"
+              (change)="onBrandChange($event)"
+            >
+              <option disabled selected hidden>Selecione a marca</option>
+              <option *ngFor="let brand of carBrands" [value]="brand">
+                {{ brand }}
+              </option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="carStore" class="form-label">Loja</label>
+            <select
+              class="form-select"
+              id="carStore"
+              (ngModel)="(car.store)"
+              name="store"
+            >
+              <option value="" disabled selected>Selecione a loja</option>
+              <option *ngFor="let store of filteredStores" [value]="store">
+                {{ store }}
+              </option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="carModel" class="form-label">Modelo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="carModel"
+              placeholder="Informe o modelo"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="carVersion" class="form-label">Versão</label>
+            <input
+              type="text"
+              class="form-control"
+              id="carVersion"
+              placeholder="Informe a versão"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="carYear" class="form-label"
+              >Ano Fabricação/Modelo</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="carYear"
+              placeholder="Selecione o setor para qual o serviço foi realizado"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="carKm" class="form-label">Quilometragem</label>
+            <input
+              type="text"
+              class="form-control"
+              id="carKm"
+              placeholder="Informe a quilometragem"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#deleteModal"
+        >
+          Excluir
+        </button>
+        <button type="button" class="btn" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="submit" class="btn">Salvar</button>
+      </div>
+    </div>
   </div>
 </div>

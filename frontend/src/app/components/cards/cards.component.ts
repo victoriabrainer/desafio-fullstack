@@ -12,12 +12,4 @@ export class CardsComponent {
   @Input() car!: CarDTO;
   @Output() edit = new EventEmitter<CarDTO>();
   @Output() delete = new EventEmitter<CarDTO>();
-
-  editCar() {
-    this.edit.emit(this.car);
-  }
-
-  deleteCar() {
-    this.delete.emit(this.car);
-  }
 }

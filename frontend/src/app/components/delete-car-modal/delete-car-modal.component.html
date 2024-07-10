@@ -1,7 +1,24 @@
-<div class="modal">
-  <div class="modal-content">
-    <p>Tem certeza que deseja excluir esse veículo?</p>
-    <button (click)="confirmDelete()">Excluir</button>
-    <button (click)="closeModal()">Cancelar</button>
+<!-- Delete Modal -->
+<div
+  class="modal fade"
+  id="deleteModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="">Tem certeza que deseja excluir esse veículo?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn" (click)="confirmDelete()">
+          Excluir
+        </button>
+      </div>
+    </div>
   </div>
 </div>

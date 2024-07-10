@@ -1,34 +1,116 @@
 .sidebar {
-  width: 250px;
-  background-color: #333;
-  height: 100%;
   position: fixed;
-  left: 0;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+  background-color: var(--white);
+  width: 250px;
+  height: 100vh;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
 }
 
-.sidebar a {
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #818181;
+.collapse.show .sidebar {
+  transform: translateX(0);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.logo {
+  margin: 25px auto 0 auto;
   display: block;
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.active {
-  background-color: #4caf50;
-  color: white;
-}
-
-.sidebar .toggle-btn {
-  position: absolute;
-  right: 15px;
-  top: 15px;
+.chevron-button {
+  background: var(--white);
+  padding: 0 2px;
+  border: 2px solid var(--light-gray);
+  border-radius: 10px;
   cursor: pointer;
+  position: relative;
+  right: -15px;
+  top: 10px;
+  transform: translateY(50%);
+  z-index: 2;
+}
+
+.chevron-button i {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.menu {
+  align-items: center;
+  margin-top: 70px;
+  color: var(--primary-text);
+  font-weight: 500;
+  padding: 7px 50px;
+}
+
+.menu p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.menu-button {
+  background: var(--light-white);
+  padding: 7px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.menu-button img {
+  width: 30px;
+}
+
+.menu-button p {
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.admin-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 15px;
+}
+
+.admin-section .admin-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.admin-section .admin-button img {
+  width: 30px;
+}
+
+.admin-section .settings {
+  border-radius: 20px;
+  padding: 7px 50px;
+}
+
+.admin-section .settings img {
+  margin-left: 40px;
+}
+
+.admin-section .logout {
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  color: var(--light-white);
+  padding: 7px 50px;
+  background-color: var(--red);
 }

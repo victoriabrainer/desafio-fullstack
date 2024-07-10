@@ -1,1 +1,45 @@
-/* TODO: Style the modal */
+.modal-body {
+  padding: 40px 40px 5px 40px;
+}
+
+.modal-body p {
+  text-align: center;
+  font-size: 18px;
+  color: var(--primary-text);
+  padding-bottom: 20px;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1px 40px 40px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-footer button {
+  border-radius: 20px;
+  padding: 5px 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-footer button:first-child {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  color: var(--secondary-text);
+}
+
+.modal-footer button:last-child {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.modal-footer button:first-child:hover {
+  background-color: var(--light-gray);
+  color: var(--primary-text);
+}
+
+.modal-footer button:last-child:hover {
+  background-color: var(--light-red);
+  color: var(--black);
+}

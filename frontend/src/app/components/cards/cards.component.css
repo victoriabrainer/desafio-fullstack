@@ -1,24 +1,68 @@
+.inline {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row {
+  gap: 10px;
+}
+
 .car-card {
-  background: white;
+  max-width: 22rem;
+  background: var(--white);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .car-image-carousel {
   width: 100%;
   height: 200px;
-  overflow: hidden;
+  border-radius: 15px;
   display: flex;
 }
 
-.carousel-item {
-  min-width: 100%;
-  transition: transform 0.5s ease;
+.car-info {
+  margin-top: 20px;
 }
 
-.car-details {
+.car-info .car-brand {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--primary-text);
+}
+
+.car-info .car-year,
+.car-info .car-km,
+.car-info .car-version {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.car-info .car-version {
+  margin-top: -10px;
+}
+
+.car-info .store {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.car-info .store .store-name {
+  margin-bottom: 0;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--primary-text);
+}
+
+.car-info .car-price {
   margin-top: 10px;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--primary-text);
 }
 
 .car-actions {
@@ -28,12 +72,32 @@
 }
 
 .car-actions button {
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.car-actions button:hover {
-  background-color: #ddd;
+.car-actions button:first-child {
+  background: transparent;
+  padding: 0;
+}
+
+.car-actions button:last-child {
+  background: var(--green);
+  color: var(--white);
+  border-radius: 25px;
+  font-size: 13px;
+  transition: all 0.3s ease-in-out;
+}
+
+.car-actions button:last-child:hover {
+  background-color: var(--light-green);
+  color: var(--black);
+  font-weight: 500;
+}
+
+.car-actions button i {
+  margin-right: 5px;
+  font-size: 16px;
 }

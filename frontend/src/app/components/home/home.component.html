@@ -1,17 +1,59 @@
-<div class="home">
+<div class="home d-flex">
   <app-sidebar></app-sidebar>
+  <div class="menu-side-bar">
+    <div class="logo-section">
+      <img
+        src="../../../assets/images/logoP.svg"
+        alt="Logo P - Parvi"
+        class="logo"
+      />
+      <button
+        class="chevron-button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebar"
+        id="chevron-right"
+      >
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="menu">
+      <p>MENU</p>
+      <button class="menu-button">
+        <img src="../../../assets/images/home.svg" alt="Home Icon" />
+      </button>
+    </div>
+
+    <div class="admin-section">
+      <button class="admin-button">
+        <img src="../../../assets/images/settings.svg" alt="Settings Icon" />
+      </button>
+      <button class="admin-button">
+        <img src="../../../assets/images/logout.svg" alt="Red Logout Icon" />
+      </button>
+    </div>
+  </div>
+
   <div class="content">
-    <button class="add-car-button" (click)="openAddCarModal()">
+    <button
+      class="add-car-button"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#addCarModal"
+    >
+      <i class="bi bi-plus-lg"></i>
       Adicionar Carro
     </button>
     <div class="car-cards">
-      <app-cards
-        *ngFor="let car of cars"
-        [car]="car"
-        (edit)="openEditCarModal($event)"
-        (delete)="openDeleteCarModal($event)"
-      ></app-cards>
+      <!-- <app-cards *ngFor="let car of cars" [car]="car"></app-cards> -->
+      <app-cards></app-cards>
+      <app-cards></app-cards>
+      <app-cards></app-cards>
+      <app-cards></app-cards>
+      <app-cards></app-cards>
+      <app-cards></app-cards>
+      <app-cards></app-cards>
+      <app-cards></app-cards>
     </div>
   </div>
 </div>
-

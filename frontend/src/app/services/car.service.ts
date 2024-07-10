@@ -7,7 +7,7 @@ import { CarDTO } from '../models/dtos/CarDTO';
   providedIn: 'root',
 })
 export class CarService {
-  private apiUrl = 'https://localhost:3000/cars';
+  private apiUrl = 'http://localhost:3000/cars';
 
   constructor(private http: HttpClient) {}
 

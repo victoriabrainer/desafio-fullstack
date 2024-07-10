@@ -1,19 +1,45 @@
 <div class="car-card">
   <div class="car-carousel">
     <!-- TODO:Carousel with car images -->
-    <img src="../../../assets/images/corolla.png" alt="Imagem do carro" />
+    <img
+      class="car-image-carousel"
+      src="../../../assets/images/corolla1.png"
+      alt="Car Image"
+    />
   </div>
   <div class="car-info">
-    <p>{{ car.model }}</p>
-    <p>{{ car.year }}</p>
-    <p>{{ car.version }}</p>
-    <p>{{ car.km }}</p>
-    <p>{{ car.store }}</p>
-    <p>{{ car.price }}</p>
+    <!-- <div class="d-flex inline">
+      <p class="car-brand">{{ car.brand }}</p>
+      <div class="d-flex flex-row">
+        <p class="car-year">{{ car.year }}</p>
+        <p class="car-km">{{ car.km }} km</p>
+      </div>
+    </div>
+    <p class="car-version">{{ car.version }}</p>
+    <div class="store">
+      <img src="../../../assets/images/on.svg" alt="Location Icon" />
+      <p class="store-name">{{ car.store }}</p>
+    </div>
+    <p class="car-price">R$ {{ car.price }}</p> -->
+
+    <div class="d-flex inline">
+      <p class="car-brand">Corolla</p>
+      <div class="d-flex flex-row">
+        <p class="car-year">2018/2019</p>
+        <p class="car-km">72.819 km</p>
+      </div>
+    </div>
+    <p class="car-version">2.0 XEI 16V 4P AUTOMÁTICO</p>
+    <div class="store">
+      <img src="../../../assets/images/on.svg" alt="Location Icon" />
+      <p class="store-name">Toyolex Natal</p>
+    </div>
+    <p class="car-price">R$ 100.000,00</p>
   </div>
   <div class="car-actions">
-    <button (click)="editCar()">Editar</button>
-    <button (click)="deleteCar()">Excluir</button>
-    <button>Comprar</button>
+    <button type="button" data-bs-toggle="modal" data-bs-target="#editCarModal">
+      <img src="../../../assets/images/settings.svg" alt="Settings Icons" />
+    </button>
+    <button><i class="bi bi-cart3"></i> Comprar</button>
   </div>
 </div>

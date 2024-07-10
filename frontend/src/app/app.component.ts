@@ -7,12 +7,14 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AddCarModalComponent } from './components/add-car-modal/add-car-modal.component';
 import { EditCarModalComponent } from './components/edit-car-modal/edit-car-modal.component';
 import { DeleteCarModalComponent } from './components/delete-car-modal/delete-car-modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterOutlet,
     HomeComponent,
     CardsComponent,
